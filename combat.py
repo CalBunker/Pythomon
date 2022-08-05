@@ -76,13 +76,13 @@ def fight(pk1, pk2):
                             typed("4 - "+str(moves2[3]))
                             moveChoice2 = input("")
                             if moveChoice2 == "1":
-                                moveChoice2 == moves2[0]
+                                moveChoice2 = moves2[0]
                             elif moveChoice2 == "2":
-                                moveChoice2 == moves2[1]
+                                moveChoice2 = moves2[1]
                             elif moveChoice2 == "3":
-                                moveChoice2 == moves2[2]
+                                moveChoice2 = moves2[2]
                             elif moveChoice2 == "4":
-                                moveChoice2 == moves2[3]
+                                moveChoice2 = moves2[3]
                             print("")
                             choice1 = 3
                             choice2 = 3
