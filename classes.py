@@ -188,7 +188,7 @@ class backpack:
         return self.__contents
     
     # Creates a set property for contents in the backpack.
-    @pokemon.setter
+    @contents.setter
     def contents(self, new_contents: list):
         # Sets the private contents variable to the new contents.
         self.__contents = new_contents

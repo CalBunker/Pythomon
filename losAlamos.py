@@ -3,16 +3,16 @@ import package_manager
 import classes as cl
 import combat as co
 
-tripleSlash = cl.move(name="Triple Slash", power=140, pp=5, type="fighting", cat="physical")
+tripleSlash = cl.move("Triple Slash", 140, 5, cl.pokemon_type.FIGHTING, cl.category.PHYSICAL)
 
-forcePalm = cl.move(name="Force Palm", power=60, pp=10, type="fighting", cat="physical")
+forcePalm = cl.move("Force Palm", 60, 10, cl.pokemon_type.FIGHTING, cl.category.PHYSICAL)
 
-icePunch = cl.move(name="Ice Punch", power=75, pp=15, type="ice", cat="physical")
+icePunch = cl.move("Ice Punch", 75, 15, cl.pokemon_type.ICE, cl.category.PHYSICAL)
 
-boneRush = cl.move(name="Bone Rush", power=25, pp=10, type=cl.pokemon_type.GROUND, cat=cl.category.PHYSICAL)
+boneRush = cl.move("Bone Rush", 25, 10, cl.pokemon_type.GROUND, cl.category.PHYSICAL)
 
-lucario = cl.pokemon(name="Lucario", moveset=[tripleSlash, forcePalm, icePunch, boneRush], lvl=44, hp=118, atk=129, defe=71, spatk=120, spdef=67, spd=80)
+lucario = cl.pokemon("Lucario", [tripleSlash, forcePalm, icePunch, boneRush], 44, 118, 129, 71, 120, 67, 80)
 
-lucario2 = cl.pokemon(name="Lucario 2", moveset=[tripleSlash, forcePalm, icePunch, boneRush], lvl=44, hp=118, atk=129, defe=71, spatk=120, spdef=67, spd=85)
+lucario2 = cl.pokemon("Lucario 2", [tripleSlash, forcePalm, icePunch, boneRush], 44, 118, 129, 71, 120, 67, 85)
 
 co.fight(lucario, lucario2)
