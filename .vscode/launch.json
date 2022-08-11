@@ -11,6 +11,14 @@
             "program": "${workspaceRoot}/losAlamos.py",
             "console": "integratedTerminal",
             "justMyCode": true
+        },
+        {
+            "name": "IsolatedPackageManager",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/package_manager.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
         }
     ]
 }

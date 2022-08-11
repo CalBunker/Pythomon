@@ -1,9 +1,20 @@
+import platform as pf
+import colorama as c
 import random as r
 import time as t
 import os
 
+# Good on you for importing only necessary modules!
+from classes import pokemon
+
 def clear():
-    os.system("clear")
+    # Check if the platform is windows
+    if pf.system() == "Windows":
+        # If so, run window's "cls" command
+        os.system("cls")
+    else:
+        # If not, run the linux "clear" command
+        os.system("clear")
 
 def typed(text: str, time_between: float = 0.02):
     for i in text:
@@ -12,8 +23,8 @@ def typed(text: str, time_between: float = 0.02):
     t.sleep(time_between*3)
     print()
 
-def fight(pk1, pk2):
-    name1 = pk1.getName()
+def fight(pk1: pokemon, pk2: pokemon):
+    name1 = pk1.name
     moves1 = pk1.getMoves()
     hp1 = pk1.getHP()
     atk1 = pk1.getAttack()
@@ -21,7 +32,7 @@ def fight(pk1, pk2):
     def1 = pk1.getDefense()
     spdef1 = pk1.getSpDefense()
     spd1 = pk1.getSpeed()
-    name2 = pk2.getName()
+    name2 = pk2.name
     moves2 = pk1.getMoves()
     hp2 = pk2.getHP()
     atk2 = pk2.getAttack()
@@ -33,16 +44,18 @@ def fight(pk1, pk2):
         if hp2 > 0:
             choice1 = 1
             choice2 = 1
-            a1 = hp1/5
-            a2 = hp2/5
+            hpbar1 = hp1/5
+            hpbar2 = hp2/5
+            print(c.Fore.BLUE)
             typed(str(name1))
-            for x in range(int(a1)):
-                print("=", end="")
-            print("\n")
+
+            print("="*int(hpbar1), end="")
+
+            print(f"\n{c.Fore.RED}")
             typed(str(name2))
-            for x in range(int(a2)):
+            for x in range(int(hpbar2)):
                 print("=", end="")
-            print("\n")
+            print(f"\n{c.Fore.WHITE}")
             while choice1 != 3:
                 typed("What will "+str(name1)+" do?")
                 typed("1 - Attack")
