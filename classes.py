@@ -64,6 +64,28 @@ class category(Enum):
     SPECIAL = 1
     STATUS = 2
 
+class environment(Enum):
+    '''
+    Enum for environment.
+    '''
+    GRASS = 0
+    WATER = 1
+    ELECTRIC = 2
+    FIRE = 3
+    ICE = 4
+    FIGHTING = 5
+    POISON = 6
+    GROUND = 7
+    FLYING = 8
+    PSYCHIC = 9
+    BUG = 10
+    ROCK = 11
+    GHOST = 12
+    DRAGON = 13
+    DARK = 14
+    STEEL = 15
+    FAIRY = 16
+
 class move:
     '''
     Class to define pokemon moves. Often used as parameters for

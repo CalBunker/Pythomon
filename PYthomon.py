@@ -15,4 +15,4 @@ lucario = cl.pokemon("Lucario", [tripleSlash, forcePalm, icePunch, boneRush], 44
 
 lucario2 = cl.pokemon("Lucario 2", [tripleSlash, forcePalm, icePunch, boneRush], 44, 118, 129, 71, 120, 67, 85)
 
-co.fight(lucario, lucario2)
+co.fight(lucario, lucario2, cl.environment.GRASS)

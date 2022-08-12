@@ -4,6 +4,11 @@ import json
 import sys
 import os
 
+print("Verifying python version...")
+if sys.version_info < (3, 10):
+    print("Python version is too old. Please update to python 3.10 or higher.")
+    sys.exit()
+
 print("Verifying Packages...")
 
 with open("packages.json", "r") as f:
@@ -24,9 +29,8 @@ for i in packages.keys():
             if os.system(f'{pip} install "{packages[i].get("import_name")}"') == 1:
                 print(f"{i} failed to install. Please install manually.")
                 sys.exit(1)
-        else:
-            print(f"{i} installed successfully.")
-            continue
+        print(f"{i} installed successfully.")
+        continue
 
 print("All packages verified.")
 if performed_install:

@@ -8,7 +8,7 @@
             "name": "ClientLaunch",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/losAlamos.py",
+            "program": "${workspaceRoot}/PYthomon.py",
             "console": "integratedTerminal",
             "justMyCode": true
         },
